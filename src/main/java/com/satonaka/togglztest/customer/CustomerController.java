@@ -13,6 +13,6 @@ public class CustomerController {
 
     @GetMapping("customers")
     public List<Customer> getCustomers() {
-        return service.getDefaultCustomers();
+        return service.getCustomers();
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class CustomerService {
-    public List<Customer> getDefaultCustomers() {
+    List<Customer> getCustomers() {
         val customerList = new ArrayList<Customer>();
         customerList.add(new Customer("1", "Alice"));
         customerList.add(new Customer("2", "Bob"));
