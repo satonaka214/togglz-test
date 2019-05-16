@@ -1,18 +1,19 @@
 package com.satonaka.togglztest.customer;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
-@RestController
+@Controller
 @RequiredArgsConstructor
 public class CustomerController {
     private final CustomerService service;
 
     @GetMapping("customers")
-    public List<Customer> getCustomers() {
-        return service.getCustomers();
+    public String getCustomers(Model model) {
+        model.addAttribute("customerList", service.getCustomers());
+
+        return "customer-list";
     }
 }
