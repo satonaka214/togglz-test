@@ -7,11 +7,11 @@ import org.togglz.core.context.FeatureContext;
 
 public enum MyFeatures implements Feature {
     @EnabledByDefault
-    @Label("First Feature")
-    FEATURE_ONE,
+    @Label("Reverse List")
+    REVERSE,
 
-    @Label("Second Feature")
-    FEATURE_TWO;
+    @Label("Shuffle List")
+    SHUFFLE;
 
     public boolean isActive() {
         return FeatureContext.getFeatureManager().isActive(this);
