@@ -17,6 +17,7 @@ public class MyFeaturesManagerBean {
     FeatureManager featureManager() {
         val manager = new FeatureManagerBuilder()
                 .togglzConfig(configuration)
+                .activationStrategy(new MyStrategy())
                 .build();
         StaticFeatureManagerProvider.setFeatureManager(manager);
 
