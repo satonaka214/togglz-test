@@ -13,7 +13,7 @@ import org.togglz.core.manager.FeatureManagerBuilder;
 public class MyFeaturesManagerBean {
     private final MyFeaturesConfiguration configuration;
 
-    @Bean("FeatureManager")
+    @Bean
     FeatureManager featureManager() {
         val manager = new FeatureManagerBuilder()
                 .togglzConfig(configuration)
